@@ -1,10 +1,10 @@
-Linux Control Panel
-Official
-Currently in: Beta.
-Released Date: 08/25/2026. [MM/DD/YYYY]
-App version: v1.0.0 - Released: 08/25/2026. [MM/DD/YYYY]
-Language and Dependencies: python3 - tkinter (tk) -
-Opened Sourced & Publicly Available.
+ ### Linux Control Panel
+ > Official
+ > Currently in: Beta.
+ > Released Date: 08/25/2026. [MM/DD/YYYY]
+ > App version: v1.0.0 - Released: 08/25/2026. [MM/DD/YYYY]
+ > Language and Dependencies: python3 - tkinter (tk) -
+ > Opened Sourced & Publicly Available.
 _________________________________________________________
 
 # Linux-Control-Panel
