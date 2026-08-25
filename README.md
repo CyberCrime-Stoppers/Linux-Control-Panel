@@ -1,3 +1,12 @@
+Linux Control Panel
+Official
+Currently in: Beta.
+Released Date: 08/25/2026. [MM/DD/YYYY]
+App version: v1.0.0 - Released: 08/25/2026. [MM/DD/YYYY]
+Language and Dependencies: python3 - tkinter (tk) -
+Opened Sourced & Publicly Available.
+_________________________________________________________
+
 # Linux-Control-Panel
 This is a Linux Version of the great Control Panel most of us that grown up with in windowsOS, Linux Control Panel will be a nice &amp; rich to have GUI
 
