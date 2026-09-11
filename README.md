@@ -24,4 +24,4 @@ support me giving me ideas. give-me-ideas@mailservices2.simplelogin.com
   >
   >
   
- <img src="screenshots/Help.png" width="600" height="600" alt="Logo">
+ <img src="screenshots/v1.0.0/Help.png" width="600" height="600" alt="Logo">
