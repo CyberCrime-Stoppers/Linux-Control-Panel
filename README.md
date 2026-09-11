@@ -19,7 +19,7 @@ support me giving me ideas. give-me-ideas@mailservices2.simplelogin.com
  
  ## Main Page Linux Control Panel.
 
-<img src="screenshots/ControlPanel.png" width="600" height="600" alt="Logo">
+<img src="screenshots/v1.0.1/ControlPanel.png" width="600" height="600" alt="Logo">
 
   >
   >
