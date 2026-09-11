@@ -1,9 +1,9 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 
-from ui.panels import ControlPanel, ButtonPanel, OutputPanel, StatusBar
+from ui.panels import ControlPanel, ButtonPanel, StatusBar
 from ui.worker import WorkerPool
-
+import subprocess
 
 class App(tk.Tk):
     """Main application window — wires all panels together."""
@@ -12,7 +12,7 @@ class App(tk.Tk):
         super().__init__()
 
         # Window setup
-        self.title("Linux Control Panel \u2014 v1.0.0")
+        self.title("Linux Control Panel \u2014 v1.0.1")
         self.geometry("1100x750")
         self.minsize(800, 500)
         self.configure(bg="#1e1e2e")
@@ -29,7 +29,6 @@ class App(tk.Tk):
         # Build UI components
         self._create_toolbar()
         self._create_button_panel()
-        self._create_output_panel()
         self._create_status_bar()
 
     # =========================================================
@@ -82,10 +81,6 @@ class App(tk.Tk):
         self.button_panel = ButtonPanel(self, self.on_button_action)
         self.button_panel.pack(fill="x", padx=10, pady=5)
 
-    def _create_output_panel(self):
-        self.output = OutputPanel(self, self.worker_pool)
-        self.output.pack(fill="both", expand=True, padx=10, pady=(0, 5))
-
     def _create_status_bar(self):
         self.status = StatusBar(self)
         self.status.pack(fill="x", padx=10, pady=(0, 10))
@@ -118,20 +113,24 @@ class App(tk.Tk):
             self.quit_app()
 
     def on_button_action(self, cmd):
-        """Dispatch button panel clicks — runs shell commands via worker pool."""
-        # String commands need user input (e.g. "whois <domain>")
+        """Launch GUI applications from the button panel."""
         if isinstance(cmd, str):
-            self.output.write(f"{cmd}<INPUT_REQUIRED>", "warn")
-            self.status.set("Input required \u2014 not implemented yet.")
+            self.status.set("Input required — not implemented yet.")
             return
 
-        # List commands go straight to the worker pool
-        if isinstance(cmd, list):
-            self.status.set(f"Running: {' '.join(cmd[:3])}...")
-            self.output.run_command(
+        self.status.set(f"Launching: {cmd[0]}...")
+        try:
+            subprocess.Popen(
                 cmd,
-                on_done=lambda: self.status.set("Done.")
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+                start_new_session=True,  # survives if you close the panel
             )
+            self.status.set(f"Launched: {cmd[0]}")
+        except FileNotFoundError:
+            self.status.set(f"Not installed: {cmd[0]}")
+        except PermissionError:
+            self.status.set(f"Permission denied: {cmd[0]}")
 
     # =========================================================
     # DIALOGS
