@@ -1,4 +1,4 @@
-# Explaining on how the app will properly edit and reconfigure sudoers file
+## Explaining on how the app will properly edit and reconfigure sudoers file
 ### in order to properly auto-config by using the User input from LCP ( linux Control Panel. )
 
 ________________________________________
