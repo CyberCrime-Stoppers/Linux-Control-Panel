@@ -1,0 +1,1 @@
+show-home-icon-toolbar
