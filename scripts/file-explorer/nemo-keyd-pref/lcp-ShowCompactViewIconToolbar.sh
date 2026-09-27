@@ -1,0 +1,1 @@
+show-compact-view-icon-toolbar
