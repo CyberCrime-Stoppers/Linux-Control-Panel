@@ -1,0 +1,1 @@
+context-menus-show-all-actions
