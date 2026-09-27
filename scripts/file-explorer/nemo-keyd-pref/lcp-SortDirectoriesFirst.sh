@@ -1,0 +1,1 @@
+sort-directories-first
