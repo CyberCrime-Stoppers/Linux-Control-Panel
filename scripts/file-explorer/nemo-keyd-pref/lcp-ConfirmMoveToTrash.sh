@@ -1,0 +1,1 @@
+confirm-move-to-trash
