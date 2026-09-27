@@ -1,0 +1,1 @@
+quick-renames-with-pause-in-between
