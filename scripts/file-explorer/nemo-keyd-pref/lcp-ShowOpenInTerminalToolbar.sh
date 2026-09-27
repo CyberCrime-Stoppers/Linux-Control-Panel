@@ -1,0 +1,1 @@
+show-open-in-terminal-toolbar
