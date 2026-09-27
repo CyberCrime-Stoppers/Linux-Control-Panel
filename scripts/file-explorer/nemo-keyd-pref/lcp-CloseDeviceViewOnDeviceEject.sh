@@ -1,0 +1,1 @@
+close-device-view-on-device-eject
