@@ -1,0 +1,1 @@
+show-new-folder-icon-toolbar
