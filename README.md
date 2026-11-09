@@ -1,4 +1,4 @@
-  ### This Linux App will be for a Linux Destribution that is being developed by 'C.C.S Scott Dev' also will work for other linux distros
+### This Linux App will be for a Linux Destribution that is being developed by 'C.C.S Scott Dev' also will work for other linux distros
   
   ## Linux Control Panel 
   - Official
